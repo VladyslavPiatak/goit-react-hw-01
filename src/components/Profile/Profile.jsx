@@ -1,11 +1,22 @@
-import User from "./ProfileUser.module"
-import Status from "./ProfileStatus.module"
+import ProfileStats from "./ProfileStatus.module";
 
-export default function Profile() {
+export default function Profile({userData: {username, tag, location, avatar}}) {
   return (
-    <>
-      <User />
-      <Stats/>
-    </>
-  )
+    <div>
+      <div>
+        <img
+          src={avatar}
+          alt="User avatar"
+        />
+        <p>{username}</p>
+        <p>@{tag}</p>
+          <p>{location}</p>
+      </div>
+      <ProfileStats userStats={userData} />
+    </div>
+  );
 }
+
+
+
+
