@@ -1,5 +1,4 @@
-export default function ProfileStatus({userStats}) {
-  const { stats: { followers, views, likes } } = userStats;
+export default function ProfileStatus({ followers, views, likes }) {
   return (
     <ul>
       <li>
